@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="extinguisher" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ccf4c51d-7ff2-402e-9f49-cedfa874c47b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="115"/>
+	<queryString>
+		<![CDATA[select * from pdfbean;]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="content" class="java.lang.String"/>
+	<field name="full_name" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="result" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="160" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="120" y="0" width="130" height="40" uuid="196d4ab5-369e-4b90-b4e8-365bc219a59c"/>
+				<textElement>
+					<font fontName="宋体" size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="0" width="130" height="40" uuid="7380ee1c-7d7d-4381-bb30-30a048b095b9"/>
+				<textElement>
+					<font fontName="宋体" size="24"/>
+				</textElement>
+				<text><![CDATA[灭火器检查表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="42" width="120" height="20" uuid="ad08e29e-4bee-470a-a6e6-6d72b02da171"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[检修内容]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="42" width="120" height="20" uuid="27abf561-ec13-45fa-99c5-1594382e3f68"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[是否检查]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="42" width="120" height="20" uuid="ef13aab6-5917-4a8c-a5a7-e816afaa9249"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[检修内容]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="42" width="120" height="20" uuid="c435519e-9280-43f5-b7e8-b8324b1a15f0"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[是否检修]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="62" width="120" height="20" uuid="0bec0b50-3526-47bf-89c4-0132b69e6725"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[瓶体损坏/生锈]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="62" width="120" height="20" uuid="6657c8fd-949e-45e5-864f-8437d6e875cf"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[压力表(重量)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="82" width="120" height="20" uuid="cb4a7d6c-f28f-44de-b4e0-cbe0d1d65000"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[安全插销]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="82" width="120" height="20" uuid="84528b5e-f578-4815-825c-a3769257def9"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[瓶体效期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="102" width="120" height="20" uuid="fc102f83-3077-4e92-ae8b-8f2ec2ec1255"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[药剂效期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="102" width="120" height="20" uuid="0fd376e7-28cd-4835-a0ff-22b6408e8cff"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[压把(压板)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="122" width="120" height="20" uuid="d1388a85-230b-4537-9326-a965fa587124"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[皮管(喷枪)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="122" width="120" height="20" uuid="88a3c8a7-322a-42f6-885a-4a806367e21b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[放置箱]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="142" width="480" height="18" uuid="b488fd03-6725-496c-bb4b-8f4b9ea38608"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[现有缺失整改如下表:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="106" y="0" width="110" height="18" uuid="7e235b56-bae0-4c7e-bb5b-efe27e2af6dc"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[事项]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="18" uuid="2da83427-6314-44d0-a96a-711fd3abdfee"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[位置与编号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="0" width="80" height="18" uuid="e3cddb94-6fc3-4c3c-bf56-bcf8ae055a7f"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[楼层]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="0" width="64" height="18" uuid="f43a3c22-1ce9-4a7b-aabc-eb864947b3d6"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[故障总数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="126" height="18" uuid="ed3f2146-9514-423a-963e-088cecbd09bf"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[备注]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="280" y="0" width="100" height="18" uuid="157551e6-cdea-47f7-b22d-f63d079d9cbe"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{full_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="216" y="0" width="64" height="18" uuid="e61c69a1-b81c-4865-a10f-f67432996d9b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{result}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="26" y="0" width="80" height="18" uuid="0f223cfa-7a7a-43ab-9d1c-19e148f9d69b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="106" y="0" width="110" height="18" uuid="b236116b-f563-4a38-90b2-421e3bc6e572"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{content}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="380" y="0" width="126" height="18" uuid="6ac8ddae-7132-46b6-87ef-58e805d52be5"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="47">
+			<staticText>
+				<reportElement x="26" y="25" width="204" height="18" uuid="9448b441-b319-4299-a86d-d14653d78d98"/>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[网址：xxx 电话：xxx 传真：xxx 邮编：xxx]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="7" width="204" height="18" uuid="b83866bf-16f4-425a-9ee2-a8e17fdb7199"/>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[地址：深圳市南山区马家龙文化中心B栋10层]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<summary>
+		<band height="296" splitType="Stretch">
+			<staticText>
+				<reportElement x="159" y="73" width="158" height="108" uuid="83235ed3-c74c-4387-b633-f2175c5e0148"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[重要消防暨工业安全部]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="73" width="133" height="108" uuid="48f03dba-77ba-48f1-b236-c951ee02fc9b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[使用单位负责人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="0" width="347" height="53" uuid="841e02ba-e876-465b-ae4f-b05bef2551f8"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[设备正常]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="53" width="347" height="20" uuid="6234ca73-524b-4dc5-97db-e951773e5342"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[2019-07-01 至 2019-07-31]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="73" width="189" height="108" uuid="824ac3cb-4f4d-42a0-9ae3-dda9ccdd74da"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[维保厂商]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="53" width="133" height="20" uuid="01863957-d3f9-49a6-8137-8d7822369482"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[检查类别：月检]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="0" width="133" height="53" uuid="72b9a3e9-e9c8-4044-9a12-640f57c792a8"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[总结说明：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="191" width="313" height="20" uuid="6fcbbe53-3a0f-48aa-8fce-5bd69e73903c"/>
+				<textElement>
+					<font fontName="宋体" size="8"/>
+				</textElement>
+				<text><![CDATA[备注：o为正常 x为不合格  /为无此项]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

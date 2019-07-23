@@ -64,7 +64,7 @@ public class RepportController {
     @JpaPage
     public void downLoad( HttpServletResponse response) throws JRException, IOException, SQLException {
         Page all = pdfBeanRepository.findAll(JpaUtils.getSpecification(), JpaUtils.getPageRequest());
-        ExportUtil.exportPdf(all.getContent(),"ca",response);
+        ExportUtil.exportPdf(all.getContent(),"report",response);
 
     }
 }
