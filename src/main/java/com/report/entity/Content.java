@@ -1,5 +1,6 @@
 package com.report.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -12,15 +13,17 @@ import javax.persistence.Table;
  */
 @Data
 @Table
-@Entity
-public class PDFBean {
+@Entity(name = "content")
+public class Content {
     @Id
+    @JsonIgnore
     long id;
-    String full_name;
     String name;
+    Integer type;
+
+
     String content;
-    String result;
-    String location;
-    String is_null;
-    String content_name;
+    String setNull;
+
+
 }

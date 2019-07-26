@@ -438,7 +438,7 @@
 							</textField>
 						</jr:detailCell>
 					</jr:column>
-					<jr:column width="178" uuid="a6cf9a3b-b422-438a-ab3b-ead998aab2b2">
+					<jr:column width="181" uuid="a6cf9a3b-b422-438a-ab3b-ead998aab2b2">
 						<jr:columnHeader style="table 17_CH" height="30" rowSpan="1">
 							<staticText>
 								<reportElement x="58" y="0" width="73" height="30" uuid="5961d1ba-3687-499b-8a6b-e8716984a773"/>
@@ -461,7 +461,7 @@
 	<columnHeader>
 		<band height="32" splitType="Stretch">
 			<staticText>
-				<reportElement x="106" y="16" width="110" height="16" uuid="7e235b56-bae0-4c7e-bb5b-efe27e2af6dc"/>
+				<reportElement x="106" y="16" width="173" height="16" uuid="7e235b56-bae0-4c7e-bb5b-efe27e2af6dc"/>
 				<box>
 					<pen lineWidth="0.25"/>
 					<topPen lineWidth="0.25"/>
@@ -472,10 +472,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="8"/>
 				</textElement>
-				<text><![CDATA[事项]]></text>
+				<text><![CDATA[检查结果]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="280" y="16" width="106" height="16" uuid="2da83427-6314-44d0-a96a-711fd3abdfee"/>
+				<reportElement x="430" y="16" width="106" height="16" uuid="2da83427-6314-44d0-a96a-711fd3abdfee"/>
 				<box>
 					<pen lineWidth="0.25"/>
 					<topPen lineWidth="0.25"/>
@@ -486,10 +486,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="8"/>
 				</textElement>
-				<text><![CDATA[位置与编号]]></text>
+				<text><![CDATA[备忘]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="216" y="16" width="64" height="16" uuid="f43a3c22-1ce9-4a7b-aabc-eb864947b3d6"/>
+				<reportElement x="279" y="16" width="151" height="16" uuid="f43a3c22-1ce9-4a7b-aabc-eb864947b3d6"/>
 				<box>
 					<pen lineWidth="0.25"/>
 					<topPen lineWidth="0.25"/>
@@ -500,21 +500,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="8"/>
 				</textElement>
-				<text><![CDATA[故障总数]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="386" y="16" width="150" height="16" uuid="ed3f2146-9514-423a-963e-088cecbd09bf"/>
-				<box>
-					<pen lineWidth="0.25"/>
-					<topPen lineWidth="0.25"/>
-					<leftPen lineWidth="0.25"/>
-					<bottomPen lineWidth="0.25"/>
-					<rightPen lineWidth="0.25"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="宋体" size="8"/>
-				</textElement>
-				<text><![CDATA[备注]]></text>
+				<text><![CDATA[不良内容]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="26" y="16" width="80" height="16" uuid="e3cddb94-6fc3-4c3c-bf56-bcf8ae055a7f"/>
@@ -528,7 +514,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="8"/>
 				</textElement>
-				<text><![CDATA[楼层]]></text>
+				<text><![CDATA[检查项目]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="26" y="0" width="510" height="16" uuid="b488fd03-6725-496c-bb4b-8f4b9ea38608"/>
@@ -549,7 +535,7 @@
 	<detail>
 		<band height="16" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement x="280" y="0" width="106" height="16" uuid="157551e6-cdea-47f7-b22d-f63d079d9cbe"/>
+				<reportElement x="430" y="0" width="106" height="16" uuid="157551e6-cdea-47f7-b22d-f63d079d9cbe"/>
 				<box>
 					<pen lineWidth="0.25"/>
 					<topPen lineWidth="0.25"/>
@@ -563,7 +549,7 @@
 				<textFieldExpression><![CDATA[$F{full_name}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="216" y="0" width="64" height="16" uuid="e61c69a1-b81c-4865-a10f-f67432996d9b"/>
+				<reportElement x="279" y="0" width="151" height="16" uuid="e61c69a1-b81c-4865-a10f-f67432996d9b"/>
 				<box>
 					<pen lineWidth="0.25"/>
 					<topPen lineWidth="0.25"/>
@@ -591,7 +577,7 @@
 				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="106" y="0" width="110" height="16" uuid="b236116b-f563-4a38-90b2-421e3bc6e572"/>
+				<reportElement x="106" y="0" width="173" height="16" uuid="b236116b-f563-4a38-90b2-421e3bc6e572"/>
 				<box>
 					<pen lineWidth="0.25"/>
 					<topPen lineWidth="0.25"/>
@@ -603,20 +589,6 @@
 					<font fontName="宋体" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{content}]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="386" y="0" width="150" height="16" uuid="6ac8ddae-7132-46b6-87ef-58e805d52be5"/>
-				<box>
-					<pen lineWidth="0.25"/>
-					<topPen lineWidth="0.25"/>
-					<leftPen lineWidth="0.25"/>
-					<bottomPen lineWidth="0.25"/>
-					<rightPen lineWidth="0.25"/>
-				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="宋体" size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{location}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
